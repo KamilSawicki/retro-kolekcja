@@ -31,7 +31,7 @@
                 <input type="password" name="password" id="password" class="form">
 
                 <label class="form-label" for="password2">Powtórz hasło</label>
-                <input type="password2" name="password2" id="password2" class="form">
+                <input type="password" name="password2" id="password2" class="form">
 
                 <button class="form-btn">Dołącz</button>
             </div>
@@ -75,6 +75,9 @@
         background-image: url("../../public/about1.png");
         background-repeat: no-repeat;
         background-position: bottom right;
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
     .join{
         min-height: 100vh;
@@ -105,9 +108,9 @@
     }
     .go{
         text-align: center;
-        position: relative;
-        bottom: 0px;
-        display: block;
+        position: absolute;
+        bottom: 1rem;
+        align-self: center;
     }
     .header{
         font-size: 2em;
@@ -147,6 +150,11 @@
     }
     .form-label::after{
         content: ':';
+    }
+    .form-wrapper{
+        width: min-content;
+        margin: auto;
+        padding: 5rem;
     }
 
     @keyframes blinker {
